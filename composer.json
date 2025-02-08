@@ -1,0 +1,197 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "fruitcake/laravel-cors": "^2.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "laravel/framework": "^10.0",
+        "laravel/sanctum": "^3.0",
+        "laravel/tinker": "^2.0",
+        "tymon/jwt-auth": "^1.0"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9.1",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^7.0",
+        "phpunit/phpunit": "^9.5.10",
+        "spatie/phpunit-watcher": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ],
+        "dev": [
+            "vendor/bin/phpunit-watcher watch"
+        ],
+        "serve": [
+            "@php artisan serve"
+        ],
+        "test": [
+            "@php artisan test"
+        ],
+        "test-docker": [
+            "@php artisan test --env=docker"
+        ],
+        "test-parallel": [
+            "@php artisan test --parallel"
+        ],
+        "test-coverage": [
+            "@php artisan test --coverage"
+        ],
+        "test-junit": [
+            "@php artisan test --report=junit"
+        ],
+        "test-coverage-html": [
+            "@php artisan test --coverage-html"
+        ],
+        "test-coverage-text": [
+            "@php artisan test --coverage-text"
+        ],
+        "test-coverage-clover": [
+            "@php artisan test --coverage-clover"
+        ],
+        "test-coverage-phpunit-xml": [
+            "@php artisan test --coverage-phpunit-xml"
+        ],
+        "test-coverage-teamcity": [
+            "@php artisan test --coverage-teamcity"
+        ],
+        "test-coverage-cobertura": [
+            "@php artisan test --coverage-cobertura"
+        ],
+        "test-coverage-lcov": [
+            "@php artisan test --coverage-lcov"
+        ],
+        "test-coverage-clover-merge": [
+            "@php artisan test --coverage-clover-merge"
+        ],
+        "test-coverage-text-merge": [
+            "@php artisan test --coverage-text-merge"
+        ],
+        "test-coverage-html-merge": [
+            "@php artisan test --coverage-html-merge"
+        ],
+        "test-coverage-junit-merge": [
+            "@php artisan test --coverage-junit-merge"
+        ],
+        "test-coverage-clover-merge": [
+            "@php artisan test --coverage-clover-merge"
+        ],
+        "test-coverage-text-merge": [
+            "@php artisan test --coverage-text-merge"
+        ],
+        "test-coverage-html-merge": [
+            "@php artisan test --coverage-html-merge"
+        ],
+        "test-coverage-junit-merge": [
+            "@php artisan test --coverage-junit-merge"
+        ],
+        "test-coverage-clover-merge": [
+            "@php artisan test --coverage-clover-merge"
+        ],
+        "test-coverage-text-merge": [
+            "@php artisan test --coverage-text-merge"
+        ],
+        "test-coverage-html-merge": [
+            "@php artisan test --coverage-html-merge"
+        ],
+        "test-coverage-junit-merge": [
+            "@php artisan test --coverage-junit-merge"
+        ],
+        "test-coverage-clover-merge": [
+            "@php artisan test --coverage-clover-merge"
+        ],
+        "test-coverage-text-merge": [
+            "@php artisan test --coverage-text-merge"
+        ],
+        "test-coverage-html-merge": [
+            "@php artisan test --coverage-html-merge"
+        ],
+        "test-coverage-junit-merge": [
+            "@php artisan test --coverage-junit-merge"
+        ],
+        "test-coverage-clover-merge": [
+            "@php artisan test --coverage-clover-merge"
+        ],
+        "test-coverage-text-merge": [
+            "@php artisan test --coverage-text-merge"
+        ],
+        "test-coverage-html-merge": [
+            "@php artisan test --coverage-html-merge"
+        ],
+        "test-coverage-junit-merge": [
+            "@php artisan test --coverage-junit-merge"
+        ],
+        "test-coverage-clover-merge": [
+            "@php artisan test --coverage-clover-merge"
+        ],
+        "test-coverage-text-merge": [
+            "@php artisan test --coverage-text-merge"
+        ],
+        "test-coverage-html-merge": [
+            "@php artisan test --coverage-html-merge"
+        ],
+        "test-coverage-junit-merge": [
+            "@php artisan test --coverage-junit-merge"
+        ],
+        "test-coverage-clover-merge": [
+            "@php artisan test --coverage-clover-merge"
+        ],
+        "test-coverage-text-merge": [
+            "@php artisan test --coverage-text-merge"
+        ],
+        "test-coverage-html-merge": [
+            "@php artisan test --coverage-html-merge"
+        ],
+        "test-coverage-junit-merge": [
+            "@php artisan test --coverage-junit-merge"
+        ],
+        "test-coverage-clover-merge": [
+            "@php artisan test --coverage-clover-merge"
+        ],
+        "test-coverage-text-merge": [
+            "@php artisan test --coverage-text-merge"
+        ],
+        "test-coverage-html-merge": [
+            "@php artisan test --coverage-html-merge"
+        ],
+        "test-coverage-junit-merge": [
+            "@php artisan test --coverage-junit-merge"
+        ],
+        "test-coverage-clover-merge": [
+            "@php artisan test --coverage-clover-merge"
+        ],
+        "test-coverage-text-merge": [
+            "@php artisan test --coverage-text-merge"
+        ],
+        "test-coverage-html-merge": [
+            "@php artisan test --coverage-html-merge"
+        ],
+        "test-coverage-junit-merge": [
+            "@php artisan test --coverage-junit-merge"
+        ]
+    }
+}
