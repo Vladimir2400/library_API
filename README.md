@@ -1,10 +1,10 @@
 Library API
 
-📌 Описание
+Описание
 
 Этот проект — API для управления библиотекой. Включает регистрацию пользователей, аутентификацию, управление книгами и выдачу книг пользователям.
 
-🚀 Запуск проекта
+Запуск проекта
 
 1️⃣ Установка зависимостей
 
@@ -36,25 +36,41 @@ php artisan serve
 
 Теперь API доступно по адресу: http://127.0.0.1:8000
 
-🛠 Тестирование API
-
-🔹 Проверка работы сервера
-
-Перейдите в браузере по адресу:
-
-http://127.0.0.1:8000/
-
-Ожидаемый ответ:
-
-{"message": "Welcome to the Library API"}
+Тестирование API
 
 🔹 Регистрация пользователя
 
+Перейдите в норень проекта и введите
 curl -X POST http://127.0.0.1:8000/register -H "Content-Type: application/json" -d '{"name": "User", "email": "user@example.com", "password": "password"}'
 
+🔹 Регистрация библиотекаря
+    php artisan librarian:register
+    
 🔹 Запуск тестов
 
 php artisan test
+
+Проверка Созданного Библиотекаря:
+
+php artisan tinker
+
+В консоли Tinker выполните следующий код:
+
+App\Models\Librarian::all();
+
+Запустите команду для авторизации библиотекаря:
+
+curl -X POST http://localhost:8000/librarian/login \
+-H "Content-Type: application/json" \
+-d '{"email": "librarian@example.com", "password": "password"}'
+
+Сохраните токен доступа из ответа.
+Протестируйте маршрут, требующий аутентификации библиотекаря:
+
+curl -X POST http://localhost:8000/books \
+-H "Authorization: Bearer YOUR_LIBRARIAN_JWT_TOKEN" \
+-H "Content-Type: application/json" \
+-d '{"title": "New Book", "description": "This is a new book", "total_copies": 3}'
 
 📚 Основные маршруты API
 
