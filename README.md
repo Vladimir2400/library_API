@@ -38,15 +38,15 @@ php artisan serve
 
 Тестирование API
 
-🔹 Регистрация пользователя
+Регистрация пользователя
 
 Перейдите в норень проекта и введите
 curl -X POST http://127.0.0.1:8000/register -H "Content-Type: application/json" -d '{"name": "User", "email": "user@example.com", "password": "password"}'
 
-🔹 Регистрация библиотекаря
+Регистрация библиотекаря
     php artisan librarian:register
     
-🔹 Запуск тестов
+Запуск тестов
 
 php artisan test
 
@@ -115,8 +115,4 @@ POST
 /books/{id}/return
 
 Вернуть книгу
-
-Примечание: Некоторые маршруты требуют аутентификации через Bearer-токен.
-
-Теперь ваш проект готов к работе!
 
